@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>869.6,4453.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>869.6,4719.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,7 +100,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="787.2,4388.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="787.2,4654.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="var_loanAmount" />
       <Variable x:TypeArguments="x:String" Name="var_Email" />
@@ -115,9 +115,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[InputStatus = False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="724.8,4276.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[InputStatus = False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="724.8,4542.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="689.6,4109.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="689.6,4375.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="variable1" />
           </Sequence.Variables>
@@ -129,27 +129,17 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InputDialogSet.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="InputDialogSet.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InOutArgument x:TypeArguments="x:Int32" x:Key="out_YearlyIncome">
-                <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="var_yearlyIncomeInput" />
-              </InOutArgument>
-              <InOutArgument x:TypeArguments="x:String" x:Key="out_emailInputVar">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_Email" />
-              </InOutArgument>
-              <InOutArgument x:TypeArguments="x:Int32" x:Key="out_loanAmount">
-                <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="var_loanAmount" />
-              </InOutArgument>
-              <InOutArgument x:TypeArguments="x:String" x:Key="out_loanTerm">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_loanTermInput" />
-              </InOutArgument>
-              <InOutArgument x:TypeArguments="x:Int32" x:Key="out_Age">
-                <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="var_AgeInput" />
-              </InOutArgument>
+              <InOutArgument x:TypeArguments="x:Int32" x:Key="out_YearlyIncome">[var_yearlyIncomeInput]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:String" x:Key="out_emailInputVar">[var_Email]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:Int32" x:Key="out_loanAmount">[var_loanAmount]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:String" x:Key="out_loanTerm">[var_loanTermInput]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:Int32" x:Key="out_Age">[var_AgeInput]</InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:IsMatch BuilderPattern="((?&gt;[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+\x20*|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;\x20*)*(?&lt;angle&gt;&lt;))?((?!\.)(?&gt;\.?[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+)+|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;)@(((?!-)[a-zA-Z\d\-]+(?&lt;!-)\.)+[a-zA-Z]{2,}|\[(((?(?&lt;!\[)\.)(25[0-5]|2[0-4]\d|[01]?\d?\d)){4}|[a-zA-Z\d\-]*[a-zA-Z\d]:((?=[\x01-\x7f])[^\\\[\]]|\\[\x01-\x7f])+)\])(?(angle)&gt;)" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="627.2,60" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[var_Email]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;EMAIL&quot;,&quot;OperationName&quot;:&quot;Email&quot;,&quot;OperationValue&quot;:&quot;((?&gt;[a-zA-Z\\d!#$%&amp;'*+\\-\\\/=?^_`{|}~]+\\x20*|\&quot;((?=[\\x01-\\x7f])[^\&quot;\\\\]|\\\\[\\x01-\\x7f])*\&quot;\\x20*)*(?&lt;angle&gt;&lt;))?((?!\\.)(?&gt;\\.?[a-zA-Z\\d!#$%&amp;'*+\\-\\\/=?^_`{|}~]+)+|\&quot;((?=[\\x01-\\x7f])[^\&quot;\\\\]|\\\\[\\x01-\\x7f])*\&quot;)@(((?!-)[a-zA-Z\\d\\-]+(?&lt;!-)\\.)+[a-zA-Z]{2,}|\\[(((?(?&lt;!\\[)\\.)(25[0-5]|2[0-4]\\d|[01]?\\d?\\d)){4}|[a-zA-Z\\d\\-]*[a-zA-Z\\d]:((?=[\\x01-\\x7f])[^\\\\\\[\\]]|\\\\[\\x01-\\x7f])+)\\])(?(angle)&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="((?&gt;[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+\x20*|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;\x20*)*(?&lt;angle&gt;&lt;))?((?!\.)(?&gt;\.?[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+)+|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;)@(((?!-)[a-zA-Z\d\-]+(?&lt;!-)\.)+[a-zA-Z]{2,}|\[(((?(?&lt;!\[)\.)(25[0-5]|2[0-4]\d|[01]?\d?\d)){4}|[a-zA-Z\d\-]*[a-zA-Z\d]:((?=[\x01-\x7f])[^\\\[\]]|\\[\x01-\x7f])+)\])(?(angle)&gt;)" RegexOption="IgnoreCase, Compiled" Result="[InputStatus]" />
-          <If Condition="[var_loanAmount &lt; var_loanAmountLimit And var_AgeInput &gt;=20]" sap:VirtualizedContainerService.HintSize="627.2,3744" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[var_loanAmount &lt; var_loanAmountLimit And var_AgeInput &gt;=20]" sap:VirtualizedContainerService.HintSize="627.2,4009.6" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="592,3555.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence sap:VirtualizedContainerService.HintSize="592,3820.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="saveTextMessage" />
                 </Sequence.Variables>
@@ -166,13 +156,13 @@
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="[NAppCloseMode.Never]" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="529.6,3321.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="843211ed-cf24-464a-97d7-06a2a75d8c8d" Version="V2" WindowResize="Maximize">
+                <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="[NAppCloseMode.Never]" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="529.6,3587.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="843211ed-cf24-464a-97d7-06a2a75d8c8d" Version="V2" WindowResize="Maximize">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,3104.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,3370.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="loanID" />
                           <Variable x:TypeArguments="s:String[]" Name="listString" />
@@ -205,7 +195,7 @@
                             <uix:TargetAnchorable BrowserURL="https://uibank.uipath.com/loans/apply" DesignTimeRectangle="265, 183, 1388, 808" DesignTimeScaleFactor="1.25" FriendlyName="'Loan ApplicationHi!'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;app-loan-application&amp;gt;div&amp;gt;div' idx='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='card-body loan-container' tag='DIV' aaname='' /&gt;" Guid="045551fb-0ff5-44dd-a110-a1ac7bcee59d" InformativeScreenshot="9e139856e2952a604a5be42cea97f759.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign DisplayName="Assign - List String" sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                           <Assign.To>
                             <OutArgument x:TypeArguments="s:String[]">[listString]</OutArgument>
                           </Assign.To>
@@ -293,8 +283,10 @@
                           </uix:NGetText.Target>
                         </uix:NGetText>
                         <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Congrats! Your loan has been Approved. Your loan Id is &quot; +loanID]" />
-                        <ui:CreateFile ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="CreateFile_2" Name="Email_UiBanks LoanId.txt" Path="C:\Users\prane\OneDrive\Documents\UiPath\POC 1" />
+                        <ui:CreateFile ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create File - to save the loan ID" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="CreateFile_2" Name="Email_UiBanks LoanId.txt" Path="C:\Users\prane\OneDrive\Documents\UiPath\POC 1" />
                         <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Email_UiBanks LoanId.txt" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[&quot;Congrats! Your loan has been Approved &quot; + vbCrLf + &quot;Your loan Id is &quot; +loanID]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The Process Is Complete&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Thank You for Banking with us.&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </uix:NApplicationCard.Body>
